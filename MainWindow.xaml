@@ -1,0 +1,32 @@
+﻿<Window x:Class="RenameGooglePhotos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RenameGooglePhotos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="650" FontSize="16">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0">目標資料夾</Label>
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Margin="0">
+            <TextBox Name="tbxToPath" Width="430"></TextBox>
+            <Button Name="btnToPath" Margin="3,0,0,0" Click="btnToPath_Click">選擇資料夾</Button>
+        </StackPanel>
+        <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">搜尋檔名規則</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="tbxSearchPattern" Text="*.jpg,*.gif" Height="30" Margin="0,5,0,5" VerticalAlignment="Center"></TextBox>
+        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Name="BtnStart" Content="開始進行檔案更名" Margin="5,20,5,5" Height="40" BorderBrush="Red" Click="BtnStart_Click"></Button>
+        <TextBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Name="tbxMemo" Margin="0,3,3,3" AcceptsTab="True" AcceptsReturn="True" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" ></TextBox>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Name="BtnRecover" Content="恢復檔案名稱" Margin="5,20,5,5" Height="40" BorderBrush="Red" Click="BtnRecover_Click"></Button>
+    </Grid>
+</Window>
